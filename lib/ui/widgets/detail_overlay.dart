@@ -23,12 +23,10 @@ class DetailOverlay extends StatefulWidget {
 }
 
 class _DetailOverlayState extends State<DetailOverlay> {
-  // Using AnimatedOpacity/Transform for the scale/fade effect
   
   Future<void> _launchUrl(String url) async {
     try {
       final uri = Uri.parse(url);
-      // Use inAppWebView for integrated experience
       if (!await launchUrl(uri, mode: LaunchMode.inAppWebView)) {
          print("Could not launch $url");
       }
@@ -39,8 +37,6 @@ class _DetailOverlayState extends State<DetailOverlay> {
 
   @override
   Widget build(BuildContext context) {
-    // If not visible and animation done (implied by using AnimatedOpacity), we want it gone.
-    // But for simplicity with Stack, we wrap in IgnorePointer
     
     final bg = widget.isDark ? Colors.black : Colors.white;
     final text = widget.isDark ? const Color(0xFFEEEEEE) : Colors.black;
