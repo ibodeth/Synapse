@@ -9,8 +9,6 @@ import '../models/news_item.dart';
 
 class RssService {
   
-  // User-Agent'ı Mobil Android olarak güncelledik.
-  // Çoğu site masaüstü user-agent ile gelen mobil istekleri bot sanıp engelleyebilir.
   static Map<String, String> get _headers => {
     'User-Agent': 'Mozilla/5.0 (Linux; Android 13; SM-S908B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -62,7 +60,6 @@ class RssService {
 
   Future<List<NewsItem>> _fetchAndParseFeed(Map<String, String> source) async {
     try {
-      // Timeout süresini 30 saniyeye çıkardık (Mobil ağlar yavaş olabilir)
       final response = await http.get(Uri.parse(source["url"]!), headers: _headers).timeout(Duration(seconds: 30));
       
       _statusCounts[source['name']!] = response.statusCode;
