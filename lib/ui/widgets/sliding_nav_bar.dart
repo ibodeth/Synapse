@@ -24,18 +24,17 @@ class SlidingNavBar extends StatefulWidget {
 class _SlidingNavBarState extends State<SlidingNavBar> {
   @override
   Widget build(BuildContext context) {
-    // Widths based on design
     const double totalWidth = 300;
     const double tabWidth = 145;
     
     return GlassContainer(
       borderRadius: 35,
-      color: Colors.white.withOpacity(0.1), // Base glass color, overridden by parent usually
+      color: Colors.white.withOpacity(0.1),
       border: Border.all(color: Colors.white.withOpacity(0.1)),
-      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 4), // Reduced vertical padding
+      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 4),
       child: SizedBox(
         width: totalWidth,
-        height: 48, // Reduced from 65
+        height: 48,
         child: Stack(
           alignment: Alignment.center,
           children: [
@@ -45,7 +44,7 @@ class _SlidingNavBarState extends State<SlidingNavBar> {
               left: widget.currentIndex == 0 ? 0 : tabWidth + 0, 
               child: Container(
                 width: tabWidth,
-                height: 40, // Reduced from 55
+                height: 40,
                 decoration: BoxDecoration(
                   color: const Color(0xFF29B6F6), 
                   borderRadius: BorderRadius.circular(30),
@@ -72,11 +71,11 @@ class _SlidingNavBarState extends State<SlidingNavBar> {
       behavior: HitTestBehavior.opaque,
       child: SizedBox(
         width: 145,
-        height: 40, // Reduced from 55
-        child: Center( // Explicit Center
+        height: 40,
+        child: Center(
           child: Icon(
             icon,
-            size: 20, // Slightly smaller icon for slim bar
+            size: 20,
             color: isSelected ? Colors.white : widget.inactiveColor, 
           ),
         ),
