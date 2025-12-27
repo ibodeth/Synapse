@@ -12,7 +12,6 @@ class NewsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Parse color string to Color object
     Color sourceColor = Color(int.parse(item.sourceColor));
 
     return GestureDetector(
