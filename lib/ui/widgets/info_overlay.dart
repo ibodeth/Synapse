@@ -14,7 +14,7 @@ class InfoOverlay extends StatelessWidget {
       backgroundColor: Colors.transparent,
       body: Stack(
         children: [
-          // Background Blur
+
           Positioned.fill(
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
@@ -24,7 +24,7 @@ class InfoOverlay extends StatelessWidget {
             ),
           ),
           
-          // Close Button (Top Right)
+
           Positioned(
             top: 50,
             right: 20,
@@ -41,18 +41,18 @@ class InfoOverlay extends StatelessWidget {
             ),
           ),
           
-          // Content
+
           Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
               child: GlassContainer(
-                color: Colors.black.withOpacity(0.5), // Added required color parameter
+                color: Colors.black.withOpacity(0.5),
                 child: Padding(
                   padding: const EdgeInsets.all(24.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      // Logo or Title
+
                       const Text(
                         "Synapse",
                         style: TextStyle(
@@ -72,7 +72,6 @@ class InfoOverlay extends StatelessWidget {
                       ),
                       const SizedBox(height: 32),
                       
-                      // Social Links
                       _buildSocialLink(
                         icon: FontAwesomeIcons.youtube,
                         text: "YouTube",

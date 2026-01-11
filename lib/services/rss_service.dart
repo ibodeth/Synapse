@@ -20,6 +20,14 @@ enum _ProxyProvider { allorigins, codetabs, corsproxy }
 
 class RssService {
   
+  static Map<String, String> get _headers => {
+    'User-Agent': 'Mozilla/5.0 (Linux; Android 13; SM-S908B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+  };
+
   // Fetches feeds incrementally and calls onBatchReceived for each completed source
   Future<List<NewsItem>> streamFeeds({
     required Function(List<NewsItem>) onBatchReceived,
@@ -67,10 +75,6 @@ class RssService {
   Future<List<NewsItem>> _fetchAndParseFeed(Map<String, String> source) async {
     String originalUrl = source['url']!;
     
-    // ... (Proxy logic hidden for brevity, assume fetch returns `content`) ...
-    // Note: Since I am replacing the whole function, I need to keep the fetch logic.
-    // I will just show the modified part where I call compute.
-
     List<String> proxyTemplates = [];
     if (kIsWeb) {
       proxyTemplates = [

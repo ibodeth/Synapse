@@ -10,17 +10,12 @@ import 'package:intl/date_symbol_data_local.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // HTTP Sertifika hatalarını yoksay (Bazı kurumsal ağlar veya eski siteler için)
   HttpOverrides.global = MyHttpOverrides();
   
-  // Tarih formatlarını yükle
   await initializeDateFormatting('tr_TR', null);
 
-  // Tam Ekran Modu (Alt butonları ve üst barı gizle)
-  // immersiveSticky: Ekrana dokunulsa bile barlar geri gelmez, kenardan kaydırınca gelir ve sonra tekrar gizlenir.
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
-  // Uygulamanın sadece dikey modda çalışmasını zorunlu kıl (İsteğe bağlı, tasarımın bozulmaması için iyidir)
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,

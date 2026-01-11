@@ -1,97 +1,98 @@
 # Synapse 🧠
 
-![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge\&logo=Flutter\&logoColor=white)
+![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge\&logo=dart\&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge\&logo=android\&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-**Synapse**, teknoloji dünyasındaki en son gelişmeleri ve özellikle yapay zeka (AI) alanındaki kırılımları tek bir merkezde toplayan, modern ve akıllı bir mobil haber uygulamasıdır. 
+**Synapse** is a modern and minimalist mobile news application that gathers artificial intelligence (AI) news in one place.
 
-"Liquid Glass" (Akışkan Cam) tasarım diliyle geliştirilen arayüzü, kullanıcıya premium bir okuma deneyimi sunar.
+Its **“Liquid Glass”** style interface provides a premium and smooth reading experience.
 
 ---
 
-## 📸 Ekran Görüntüleri
+## 📸 Screenshots
 
-| Ana Sayfa (Gündem) | Haber Detay (Glass) | Kaynak İçi Tarayıcı | Hakkında Overlay |
-|:-----------------:|:-------------------:|:-------------------:|:----------------:|
+|                 Home Page                |                Light Theme               |            Go to Source & Read           |              In-App Browser              |
+| :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
 | <img src="assets/ss1.png" width="200" /> | <img src="assets/ss2.png" width="200" /> | <img src="assets/ss3.png" width="200" /> | <img src="assets/ss4.png" width="200" /> |
 
-*(Not: Projenizi forklayıp `assets` klasörüne ss1.png, ss2.png gibi ekran görüntüleri eklerseniz yukarıdaki alanlar otomatik dolar.)*
+---
+
+## ✨ Key Features
+
+### 🚀 Advanced News Engine
+
+* **20+ Trusted Sources:** ShiftDelete, Webtekno, DonanımHaber, BBC AI, Euronews, Swipeline, and more.
+* **Smart Filtering:** Removes magazine, spam, and unrelated content, keeping only Technology and AI-focused news.
+* **AI-Focused System:** Scans titles and content to prioritize and score AI-related news.
+* **Automatic Image Extraction:** If an RSS feed has no image, the app scans the website’s `OG-Tags` to fetch the original cover image.
+
+### 🎨 Modern & Smooth Interface (Glassmorphism)
+
+* **Apple-Style Liquid Glass:** High blur effects, light refractions, and gradient transitions for a premium UI.
+* **Immersive Experience:** Full-screen reading mode without distractions.
+* **Dynamic Theme:** Supports Dark and Light mode based on device settings or user preference.
+* **Interactive Animations:** Smooth animations for page transitions, pop-ups, and buttons.
+
+### 📱 User Experience (UX)
+
+* **In-App Browser:** Read full articles without leaving the app.
+* **Offline First:** Recently fetched news is cached for fast loading and quick startup.
 
 ---
 
-## ✨ Temel Özellikler
+## 🛠 Technologies & Libraries Used
 
-### 🚀 Gelişmiş Haber Motoru
-*   **20+ Seçkin Kaynak:** ShiftDelete, Webtekno, DonanımHaber, BBC AI, Euronews, Swipeline ve daha fazlası.
-*   **Akıllı Filtreleme:** Magazin, spam veya alakasız içerikleri temizleyen, sadece "Teknoloji ve AI" odaklı içerikleri süzen özel algoritma.
-*   **Yapay Zeka Odaklı:** Başlık ve içerik taraması yaparak AI ile ilgili haberleri önceliklendirir ve puanlar.
-*   **Otomatik Görsel Çıkarımı:** RSS akışında görsel olmayan haberler için sitenin `OG-Tags` verilerini tarayarak orijinal kapak fotoğrafını bulur.
+This project is built with **Flutter**.
 
-### 🎨 Modern & Akışkan Arayüz (Glassmorphism)
-*   **Apple-Style Liquid Glass:** Yüksek blur, ışık kırılmaları ve gradyan geçişleriyle zenginleştirilmiş UI bileşenleri.
-*   **Immersive Experience:** Tam ekran modu ile dikkat dağıtıcı unsurlardan arındırılmış okuma.
-*   **Dinamik Tema:** Cihaz ayarlarına veya kullanıcı tercihine göre Koyu/Açık mod desteği.
-*   **İnteraktif Animasyonlar:** Sayfa geçişleri, açılır pencereler ve butonlarda akıcı animasyonlar.
-
-### 📱 Kullanıcı Deneyimi (UX)
-*   **Uygulama İçi Tarayıcı:** Haberlerin tamamını okumak için uygulamadan çıkmanıza gerek kalmaz.
-*   **Geliştirici Paneli:** YouTube, GitHub ve LinkedIn bağlantılarına hızlı erişim sağlayan özel info overlay.
-*   **Offline First:** Son çekilen haberleri bellekte tutarak hızlı açılış sağlar.
+* **Http & Html Parser:** Fetching and scraping data from RSS and HTML-based websites.
+* **Cached Network Image:** Image caching and performance optimization.
+* **Url Launcher:** Managing external links and the in-app browser.
+* **Intl:** Date formatting and localization.
+* **Font Awesome:** Social media icons and visual elements.
+* **Google Fonts:** Modern typography (Inter font family).
 
 ---
 
-## 🛠 Kullanılan Teknolojiler ve Kütüphaneler
+## 📥 Installation (APK)
 
-Bu proje **Flutter** kullanılarak geliştirilmiştir.
+To download the latest APK version, visit the **[Releases](https://github.com/ibodeth/Synapse/releases)** page.
 
-*   **Http & Html Parser:** RSS ve HTML tabanlı sitelerden veri kazıma (Web Scraping).
-*   **Cached Network Image:** Görsellerin önbelleğe alınması ve performans optimizasyonu.
-*   **Url Launcher:** Dış bağlantıların ve uygulama içi tarayıcının yönetimi.
-*   **Intl:** Tarih formatlama ve yerelleştirme işlemleri.
-*   **Font Awesome:** Sosyal medya ikonları ve görsel materyaller.
-*   **Google Fonts:** Modern tipografi (Inter font ailesi).
-
----
-
-## 📥 Kurulum (APK)
-
-Uygulamanın en son sürümünü (APK) indirmek için **[Releases](https://github.com/ibodeth/Synapse/releases)** sayfasını ziyaret edebilirsiniz.
-
-Kendi ortamınızda çalıştırmak için:
+To run the project locally:
 
 ```bash
-# Projeyi klonlayın
+# Clone the repository
 git clone https://github.com/ibodeth/Synapse.git
 
-# Proje dizinine gidin
+# Go to project directory
 cd Synapse
 
-# Paketleri yükleyin
+# Install dependencies
 flutter pub get
 
-# Uygulamayı başlatın
+# Run the app
 flutter run
 ```
 
 ---
 
-## 👨‍💻 Geliştirici
+## 👨‍💻 Developer
 
 <div align="center">
 
 **İbrahim Nuryağınlı**
 
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@ibrahim.python)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ibodeth)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ibrahimnuryaginli/)
-[![Website](https://img.shields.io/badge/Website-2196F3?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ibodeth.github.io/)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge\&logo=youtube\&logoColor=white)](https://www.youtube.com/@ibrahim.python)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/ibodeth)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/ibrahimnuryaginli/)
+[![Website](https://img.shields.io/badge/Website-2196F3?style=for-the-badge\&logo=google-chrome\&logoColor=white)](https://ibodeth.github.io/)
 
 </div>
 
 ---
 
-## 📄 Lisans
+## 📄 License
 
-Bu proje MIT lisansı ile lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakabilirsiniz.
+This project is licensed under the MIT License.
+See the `LICENSE` file for more details.
