@@ -36,6 +36,8 @@ class NewsCard extends StatelessWidget {
                 imageUrl: item.image,
                 width: 85,
                 height: 85,
+                memCacheWidth: 255, // 85 * 3 (for high pixel density screens)
+                memCacheHeight: 255,
                 fit: BoxFit.cover,
                 errorWidget: (context, url, error) => Container(color: Colors.grey),
               ),

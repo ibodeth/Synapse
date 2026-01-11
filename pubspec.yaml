@@ -43,6 +43,8 @@ dependencies:
   xml: ^6.6.1
   font_awesome_flutter: ^10.7.0
   flutter_launcher_icons: ^0.13.1
+  shared_preferences: ^2.5.4
+  flutter_staggered_animations: ^1.1.1
 
 dev_dependencies:
   flutter_test:
